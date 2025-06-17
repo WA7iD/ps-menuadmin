@@ -1,44 +1,140 @@
-# Svelte + TS + Vite
+# ps-adminmenu
+The Admin Menu crafted by [OK1ez](https://github.com/OK1ez) and our dedicated team is user-friendly and intuitive. We invite you to contribute by submitting new features through PRs. We're always eager to review and consider new features. Make sure you use our template when opening Issues or they will be auto closed.
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+## Unofficial ESX Version
+Made by Avilchiis for the community, you can download it [here](https://github.com/avilchiis/ps-adminmenu). **WE DO NOT PROVIDE SUPPORT FOR ESX VERSION, DO NOT ASK YOU'LL BE IGNORED.**
 
-## Recommended IDE Setup
+# Preview
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/0da6cf4d-fc72-497f-a59c-08011b3785ab" width="300">
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/2d366445-4094-4a10-a570-265cb230fc37" width="300">
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/33382d64-3b95-42aa-9659-d92dbdca94d2" width="600">
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/d63982c6-9b04-4dec-b059-55e1cc5ea608" width="600">
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/ab44df15-7d9e-4753-9c71-2492348a229d" width="600">
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/0fb81425-dd45-4354-8fb7-94e62ac954ae" width="600">
+<img src="https://github.com/Project-Sloth/ps-adminmenu/assets/82112471/6f1d0ea9-ea55-4088-98de-ceb4fb1c3838"  width="600">
 
-[VSCode](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+# Change Language.
+- Place this `setr ox:locale en` inside your `server.cfg`
+- Change the `en` to your desired language!
 
-## Need an official Svelte framework?
+**Supported Languages:**
+| **Alias** | **Language Names**   |
+| --------- | -------------------- |
+| en        | English              |
+| fr        | French               |
+| id        | Indonesia            |
+| pt-br     | Brazilian Portuguese |
+| tr        | Turkish              |
+| es        | Spanish              |
+| nl        | Dutch                |
+| no        | Norwegian            |
+| de        | German               |
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+# Features
+* Admin Car
+* Ban Player
+* Bring Player
+* Change Plate
+* Checking number plates before ```Change Plate```
+* Change Time
+* Change Weather
+* Check Permissions
+* Clear Inventory
+* Clear Inventory Offline
+* Clothing Menu
+* Copy Coordinates
+* Delete Vehicle
+* Delete Laser
+* Explode Player
+* Fix Vehicle
+* Freeze Player
+* Give Clothing Menu
+* Give Item
+* Give Item to All
+* Give Money
+* Give Money to All
+* Give Vehicle to Player
+* Give NUI Focus
+* God Mode
+* Invisible
+* Infinite Ammo
+* Kick Player
+* Kill Player
+* Make Player Drunk
+* Message Player
+* Mute Player
+* Max Vehicle Mods
+* No Clip
+* Open Inventory
+* Open Stash
+* Open Trunk
+* Play Sound
+* Refuel Vehicle
+* Remove Money
+* Remove Stress
+* Revive All
+* Revive Player
+* Revive Radius
+* Set Bucket
+* Server Announcement
+* Set Ammo
+* Set Vehicle State in Garage (In & Out)
+* Set Gang
+* Set Job
+* Set on Fire
+* Set Permissions
+* Set Player Ped
+* Sit in Vehicle
+* Spawn Vehicle
+* Spectate Player
+* Teleport Back
+* Teleport to Coordinates
+* Teleport to Marker
+* Teleport to player
+* Toggle Blackout
+* Toggle Blips
+* Toggle Coords
+* Toggle Cuffs
+* Toggle Delete Laser
+* Toggle Duty
+* Toggle Names
+* Vehicle Dev Menu
+* Warn player
 
-## Technical considerations
+# Depedency
+1. [qb-core](https://github.com/qbcore-framework/qb-core)
+2. [ox_lib](https://github.com/overextended/ox_lib)
 
-**Why use this over SvelteKit?**
+# Installation
+1. Download the latest release.
+2. Add the files to your server resources.
+3. Ensure `ps-adminmenu` in your server cfg. Make sure ox_lib starts before ps-adminmenu.
+4. Set the config in `shared/config.lua` to your needs.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+A community video has been made for setup instructions and showcase, you can find it [here](https://www.youtube.com/watch?v=aez5RIi8db8&ab_channel=Kamaryn)
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+## Permissions
+Make sure you've correctly configured player permissions in your server.cfg by using ACE permissions with the appropriate identifier. Otherwise, you'll be unable to access or launch the admin menu. Here's a sample configuration where the player, MonkeyWhisper, is assigned god, admin, and mod roles, you should not have all 3 permissions for a single person. For a deeper understanding of how QBCore manages permissions, refer to [this documentation.](https://docs.qbcore.org/qbcore-documentation/guides/setting-permissions)
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+### Player Permission
 ```
+add_principal identifier.fivem:565139 qbcore.god # MonkeyWhisper
+add_principal identifier.fivem:565139 qbcore.admin # MonkeyWhisper
+add_principal identifier.fivem:565139 qbcore.mod # MonkeyWhisper
+```
+
+
+## Setting Up Logs
+1. Set up a Discord Webhook for the channel you want the logs to be.
+2. Add this to `qb-smallresource/server/logs.lua` -
+`['ps-adminmenu'] = 'discord webhook'`
+3. Replace the place holder with your webhook link.
+
+# To Do
+* Rework the blips/names
+
+# Credits
+* [OK1ez](https://github.com/OK1ez)
+* [Lenzh](https://github.com/Lenzh)
+* [LeSiiN](https://github.com/LeSiiN)
+* Project Sloth Team
